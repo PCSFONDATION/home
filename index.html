@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">// JavaScript code
+function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('animals');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}</script>
+	<style type="text/css">#searchbar{
+     margin-left: 15%;
+     padding:15px;
+     border-radius: 10px;
+   }
+ 
+   input[type=text] {
+      width: 30%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+ 
+   /* When the input field gets focus,
+        change its width to 100% */
+   input[type=text]:focus {
+     width: 70%;
+   }
+ 
+  #list{
+    font-size:  1.5em;
+    margin-left: 90px;
+   }
+ 
+.animals{
+   display: list-item;    
+  }
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FFFF;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+h1{
+	color: #0366FF;
+}
+p{
+	color: #FA483F;
+}
+html {
+  background-image: url("Bleu Technologie et Jeu Logo.png");
+}</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>clasgam.mandelieu</title>
+</head>
+<body>
+<h1>Ⓒⓛⓐⓢⓖⓐⓜⓔ</h1>
+<p>Salut joueur, ici tu peut trouvez tout les nouveaux jeux de dévelppeur modeste, tu peux les testés dés maintenant si tu t'ennuis ?</p>
+<input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="rechercher votre jeux...">
+      
+    <!-- ordered list -->
+    <h2>ʟᴇꜱ ɴᴏᴜᴠᴇᴀᴜx ᴊᴇᴜx</h2>
+    <ol id='list'>
+        <a href="page object wars.html"><li class="animals">object wars</li></a>
+        <a href=""><li class="animals">factory</li></a>
+        <li class="animals">Elephant</li>
+        <li class="animals">Fish</li>
+        <li class="animals">Gorilla</li>
+        <li class="animals">Monkey</li>
+        <li class="animals">Turtle</li>
+        <li class="animals">Whale</li>
+        <li class="animals">Aligator</li>
+        <li class="animals">Donkey</li>
+        <li class="animals">Horse</li>
+    </ol>
+      
+    <!-- linking javascript -->
+    <script src="./animals.js"></script>
+    <a href="a propos de nous.html"><p>(っ◔◡◔)っ ♥ a propos de nous ♥</p></a>
+</body>
+</html>
